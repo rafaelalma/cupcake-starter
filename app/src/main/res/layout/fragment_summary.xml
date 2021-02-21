@@ -15,6 +15,7 @@
 -->
 <!-- Layout for order summary -->
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".SummaryFragment">
 
@@ -140,6 +141,15 @@
                 android:layout_marginTop="@dimen/side_margin"
                 android:onClick="@{() -> summaryFragment.sendOrder()}"
                 android:text="@string/send" />
+
+            <Button
+                android:id="@+id/cancel_button"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_between_elements"
+                android:onClick="@{() -> summaryFragment.cancelOrder()}"
+                android:text="@string/cancel" />
 
         </LinearLayout>
     </ScrollView>
